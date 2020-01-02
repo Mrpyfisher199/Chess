@@ -657,7 +657,7 @@ class SIDE(list):
             if not self.hasMoved \
                 and not self.inCheck() \
                 and not self.hasMovedRook1 \
-                and self[self.getIndexOfPos[pos[0]+3,pos[1]]][1] == 'rook':
+                and self[self.getIndexOfPos([pos[0]+3,pos[1]])][1] == 'rook':
                 if [pos[0]+1,pos[1]] in self.getChecked() \
                     or [pos[0]+2,pos[1]] in self.getChecked() \
                     or [pos[0]+3,pos[1]] in self.getChecked() \
@@ -675,7 +675,7 @@ class SIDE(list):
             if not self.hasMoved \
                 and not self.inCheck() \
                 and not self.hasMovedRook0 \
-                and self[self.getIndexOfPos[pos[0]+4,pos[1]]][1] == 'rook':
+                and self[self.getIndexOfPos([pos[0]+4,pos[1]])][1] == 'rook':
                 if [pos[0]-1,pos[1]] in self.getChecked() \
                     or [pos[0]-2,pos[1]] in self.getChecked() \
                     or [pos[0]-4,pos[1]] in self.getChecked() \
